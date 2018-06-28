@@ -1,3 +1,3 @@
-FROM golang:1.10.2
-
-ENV GO15VENDOREXPERIMENT=1
+FROM mysql:5.6.27
+COPY /project.sql /docker-entrypoint-initdb.d/dump.sql
+EXPOSE 3306
